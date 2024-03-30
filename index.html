@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تأثير تحريكي للعيد</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* تحديد تأثير الانتقال */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10vh); }
+    60% { transform: translateY(-5vh); }
+  }
+
+  /* تطبيق التأثير على العنصر */
+  .festive-text {
+    font-size: 6vw;
+    animation: bounce 2s infinite;
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* تعديل حجم النص عند تغيير حجم الشاشة */
+  @media screen and (max-width: 768px) {
+    .festive-text {
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .festive-text {
+      font-size: 8vw;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="festive-text">كل عام وانتم بخير ينعاد علينا وعليكم بالصحة والعافية</h1>
+
+<canvas id="canvas">Your browser does not support the 'canvas' element.</canvas>
+
+<script src="app.js"></script>
+
+</body>
+</html>
